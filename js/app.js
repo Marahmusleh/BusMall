@@ -107,6 +107,7 @@ function handleclicking(event){
     }
     }
 
+
     
 function handleShowing(){
     gettingList();
@@ -138,7 +139,7 @@ function handleShowing(){
               label:'Total of Votes',
               data : arrFav,
               backgroundColor: [
-                'rgba(255, 76, 132, 0.4)',
+                'rgba(255, 87, 132, 0.4)',
               ],
           },{
             label: 'Number of viewed products',
