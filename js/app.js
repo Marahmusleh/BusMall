@@ -105,10 +105,9 @@ function handleclicking(event){
     btn.addEventListener('click',handleShowing);
     first.removeEventListener('click',handleclicking);
     }
+    savingVotesAndSeen();
     }
-
-
-    
+ 
 function handleShowing(){
     gettingList();
     gettingChart();
@@ -153,3 +152,18 @@ function handleShowing(){
       },
   }); 
 }
+
+function savingVotesAndSeen() {
+    let converteArr =JSON.stringify(Product.allProducts);
+    localStorage.setItem('Votes',converteArr);
+    
+
+}
+
+function gettingVotes (){
+    let votesdata = localStorage.getItem('Votes');
+    if(votesdata){
+        Product.allProducts=JSON.parse(votesdata);
+    }
+}
+gettingVotes();
